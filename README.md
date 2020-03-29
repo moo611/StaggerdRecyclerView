@@ -3,8 +3,8 @@ android瀑布流，完美解决滑动过程中item位置错乱，下拉刷新顶
 
 
 # 效果图
-![](https://github.com/moo611/StaggerdRecyclerView/blob/master/images/e1.jpg)
 ![](https://github.com/moo611/StaggerdRecyclerView/blob/master/images/e2.gif)
+![](https://github.com/moo611/StaggerdRecyclerView/blob/master/images/e3.gif)
 # 集成
 #### 版本
 [![](https://jitpack.io/v/moo611/StaggerdRecyclerView.svg)](https://jitpack.io/#moo611/StaggerdRecyclerView)
