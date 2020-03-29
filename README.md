@@ -3,7 +3,8 @@ android瀑布流，完美解决滑动过程中item位置错乱，下拉刷新顶
 
 
 # 效果图
-
+![](https://github.com/moo611/StaggerdRecyclerView/blob/master/images/e1.jpg)
+![](https://github.com/moo611/StaggerdRecyclerView/blob/master/images/e2.gif)
 # 集成
 #### 版本
 [![](https://jitpack.io/v/moo611/StaggerdRecyclerView.svg)](https://jitpack.io/#moo611/StaggerdRecyclerView)
@@ -19,7 +20,7 @@ dependencies {
 	        implementation 'com.github.moo611:StaggerdRecyclerView:latestversion'
 	}
 ```
-#基本用法
+# 基本用法
 
 #### 1.布局文件里添加
 ```xml
