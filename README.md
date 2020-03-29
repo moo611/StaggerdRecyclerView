@@ -2,9 +2,9 @@
 android瀑布流，完美解决滑动过程中item位置错乱，下拉刷新顶部空白，加载更多顶部错乱等问题
 
 
-#效果图
+# 效果图
 
-#集成
+# 集成
 #### 版本
 [![](https://jitpack.io/v/moo611/StaggerdRecyclerView.svg)](https://jitpack.io/#moo611/StaggerdRecyclerView)
 ```java
@@ -138,62 +138,23 @@ private List<FakeModel> datas = new ArrayList<>();
         staggedAdapter = new MyAdapter<>(this);
         str.link(staggedAdapter,2);
 
-        //动画效果,可以不添加
-        str.addAnimation(R.anim.right_to_left);
-       //间距，可以不添加
-        str.addDecoration(new GridItemDecoration(this,10));
-
+      
         str.addCallbackListener(new LoadMoreAndRefresh() {
             @Override
             public void onLoadMore() {
-                getData(false);
+                loadMore();//加载更多
             }
 
             @Override
             public void onRefresh() {
 
-                getData(true);
+                refresh();//下拉刷新
             }
         });
 
-        getData(true);
+        refresh();
 
 ...
-
- /**
-     * 模拟网络请求
-     *
-     * @param refresh
-     */
-
-    private void getData(final boolean refresh) {
-
-         //模拟刷新，只插入一遍数据
-        if (refresh){
-
-            if (datas.size()==0){
-
-                datas.add(new FakeModel(500,500,R.drawable.a1));
-                datas.add(new FakeModel(500,1000,R.drawable.a2));
-
-               ...
-            }
-
-            staggedAdapter.refresh(datas);
-
-        }else{
-
-            //模拟加载更多
-
-            datas.add(new FakeModel(500,840,R.drawable.c4));
-            datas.add(new FakeModel(500,712,R.drawable.c5));
-            ...
-            staggedAdapter.loadMore(datas);
-        }
-
-
-    }
-
 
 ```
 # 其他功能
