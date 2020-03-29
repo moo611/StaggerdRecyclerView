@@ -143,13 +143,13 @@ private List<FakeModel> datas = new ArrayList<>();
         str.addCallbackListener(new LoadMoreAndRefresh() {
             @Override
             public void onLoadMore() {
-                loadMore();//加载更多
+                //加载更多
             }
 
             @Override
             public void onRefresh() {
 
-                refresh();//下拉刷新
+                //下拉刷新
             }
         });
 
